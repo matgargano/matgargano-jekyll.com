@@ -1,0 +1,73 @@
+---
+layout: default
+title: Mat Gargano.com
+
+icons:
+- link: https://github.com/matgargano
+  class: fa fa-github
+  smallText: Github
+- link: https://linkedin.com/in/matgargano
+  class: fa fa-linkedin
+  smallText: LinkedIn
+- link: https://profiles.wordpress.org/matstars
+  class: fa fa-wordpress
+  smallText: WordPress Plugins
+- link: /resume
+  text: Resume
+  wrap_class: resume-download
+  smallText: Resume
+  smallClass: fa fa-download
+
+sites:
+- link: https://classaction.com
+  image: class-action.jpg
+  name: ClassAction.com
+- link: https://businesstrialgroup.com
+  image: business-trial-group.jpg
+  name: Business Trial Group
+- link: https://whistleblowerattorneys.com
+  image: whistle-blower-attorneys.jpg
+  name: Whistle Blower Attorneys
+- link: http://endlessvacation.com
+  image: endless-vacation.jpg
+  name: Endless Vacation
+- link: https://consumerprotectiongroup.com
+  image: consumer-protection-group.jpg
+  name: Consumer Protection Group
+- link: http://co.williams.com
+  image: williams.jpg
+  name: Willams Companies
+intro_paragraph: Hello there, I'm Mat, I really like to build cool things. My favorite toys include PHP (i <i class="fa fa-heart" aria-hidden="true"></i> PHP), HTML, CSS, JavaScript (i <i class="fa fa-heart" aria-hidden="true"></i> JavaScript too). Things like Sass, LESS, Laravel, WordPress, REST, Grunt, Gulp, Webpack, Browserify, Ansible all make me happy. <br><br>Oh, yeah, I love pizza <img class="pizza" src="/images/pizza.svg" alt="Pizza">
+
+---
+<article class="type-system-geometric outer-wrap">
+
+    <div class="intro-paragraph-wrap"><h2 class="animated lightSpeedIn center intro-paragraph">{{ page.intro_paragraph }}</h2></div>
+    <hr class="clear-left">
+    <h2 class="center bold underline">Sites I've Acted as Principal Developer / Architect On</h2>
+    <section>
+
+
+        <div class="columns">
+            {% for site in page.sites %}
+                <div class="column">
+                    <div class="card">
+                        <a href="{{ site.link }}" target="_blank">
+                            <div class="card-image">
+                                <img src="{{ site.baseurl }}/images/{{ site.image }}" alt="">
+                            </div>
+                        </a>
+                        <a href="{{ site.link }}" target="_blank">
+                            <div class="card-header center">
+                                {{ site.name }}
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            {% endfor %}
+
+
+        </div>
+
+    </section>
+</article>

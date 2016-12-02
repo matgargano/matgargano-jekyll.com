@@ -1,0 +1,61 @@
+
+.center {
+  text-align: center;
+}
+
+body {
+  margin: 0;
+}
+
+.intro-paragraph {
+  @include span-columns(12);
+  @media only screen and (max-width: $screen-sm-max) {
+    @include span-columns(12);
+  }
+  @include clearfix;
+
+}
+
+.intro-paragraph-wrap {
+
+  @media only screen and (max-width: $screen-sm-max) {
+    @include span-columns(8);
+    @include shift-in-context(2);
+
+  }
+
+  @media only screen and (min-width: $screen-md-min) {
+    @include span-columns(8);
+    @include shift-in-context(2);
+
+  }
+
+
+}
+
+.pizza {
+  height:50px;
+  width:50px;
+}
+
+.clear-left {
+  clear:left;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+body .inline {
+  @media only screen and (max-width: $screen-sm-max) {
+    display: inline !important;
+  }
+}

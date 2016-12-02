@@ -1,0 +1,25 @@
+machine:
+  php:
+    version: 5.5.21
+dependencies:
+  override:
+    - \curl -L https://get.rvm.io | bash -s stable --ruby --auto-dotfiles
+    - npm install
+    - bower install
+    - gem install sass
+    - gem install jekyll
+
+test:
+  override:
+    - echo 'Who invented 1 + 1?'
+deployment:
+  staging:
+    branch: development
+    commands:
+      - grunt deployStaging
+
+
+  production:
+    branch: master
+    commands:
+      - grunt deployProduction

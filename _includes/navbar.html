@@ -1,0 +1,33 @@
+<header class="navigation" role="banner">
+    <div class="navigation-wrapper">
+
+        <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu"><i class="fa fa-bars"></i></a>
+        <nav role="navigation">
+            <h1 class="mobile-title hidden-md hidden-lg">Mat Gargano's <i class="fa fa-home"></i></h1>
+            <ul id="js-navigation-menu" class="navigation-menu show">
+                <li class="nav-link hidden-sm">{{ page.title }}</li>
+                {% for icon in page.icons %}
+                <li class="visible-sm text-left social-icons__icon nav-link {{icon.wrap_class }}"><a target="_BLANK"
+                                                                                                     href="{{icon.link}}">
+                    <i class="{% if (icon.smallClass) %} {{ icon.smallClass }} {%else%}{{ icon.class}} {%endif%}"></i> &nbsp;
+                    {{ icon.smallText }}
+                </a></li>
+                {% endfor %}
+            </ul>
+        </nav>
+        <div class="navigation-tools social-icons hidden-sm">
+
+
+            <ul class="navigation-menu show">
+                {% for icon in page.icons %}
+                <li class="social-icons__icon nav-link {{icon.wrap_class }}"><a target="_BLANK" href="{{icon.link}}">
+                    {{ icon.text }} &nbsp;<i class="{{ icon.class}}"></i>
+                </a></li>
+                {% endfor %}
+
+            </ul>
+
+
+        </div>
+    </div>
+</header>

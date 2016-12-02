@@ -1,0 +1,10 @@
+$action-color: #000;
+$white: #FFF;
+$screen-sm-min: 480px !default;
+$screen-md-min: 860px !default;
+$screen-lg-min: 1200px !default;
+$screen-sm-max: ($screen-md-min - 1) !default;
+$screen-md-max: ($screen-lg-min - 1) !default;
+$fa-font-path: "../../external/font-awesome/fonts";
+$heading-font: 'PT Serif', serif;
+$body-font: 'Inconsolata', monospace;

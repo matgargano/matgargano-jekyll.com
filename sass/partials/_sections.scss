@@ -1,0 +1,16 @@
+.columns {
+  @include outer-container;
+  .column {
+    @include span-columns(12);
+    @include media(700px) {
+      @include omega-reset(3n);
+      @include span-columns(6);
+      @include omega(2n);
+    }
+    @include media(1100px) {
+      @include omega(3n);
+      @include omega-reset(2n);
+      @include span-columns(4);
+    }
+  }
+}
