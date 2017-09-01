@@ -93,6 +93,9 @@ module.exports = function (grunt) {
             },
             "robots-staging": {
                 command: 'printf "User-agent: *\nDisallow: /" > ./docs/robots.txt'
+            },
+            "moveToDocs": {
+                command: 'rm -rf docs && mv _site docs'
             }
 
         },
@@ -161,7 +164,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks("grunt-contrib-cssmin");
     grunt.loadNpmTasks("grunt-contrib-concat");
     grunt.loadNpmTasks("grunt-rsync");
-    grunt.registerTask('build', ['shell:bower', 'sass:production', 'jshint', 'uglify:theme',  'autoprefixer', 'concat', 'cssmin','shell:jekyllBuild']);
+    grunt.registerTask('build', ['shell:bower', 'sass:production', 'jshint', 'uglify:theme',  'autoprefixer', 'concat', 'cssmin','shell:jekyllBuild', 'shell:moveToDocs']);
     grunt.registerTask('default', ['build', 'shell:jekyll']);
     grunt.registerTask('nojekyll', ['shell:bower', 'sass:production', 'jshint', 'uglify:theme','concat', 'autoprefixer', 'cssmin']);
     grunt.registerTask('deployStaging', ['build', 'shell:robots-staging', 'rsync:staging']);
