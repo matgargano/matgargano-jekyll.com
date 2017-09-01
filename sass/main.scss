@@ -1,8 +1,7 @@
 @import "partials/variables";
 
-@import "../external/neat/app/assets/stylesheets/neat";
-@import "../external/bourbon/app/assets/stylesheets/bourbon";
-@import "../external/font-awesome/scss/font-awesome.scss";
+@import "../docs/external/neat/app/assets/stylesheets/neat";
+@import "../docs/external/bourbon/app/assets/stylesheets/bourbon";
 
 @import "mixins/omega-reset";
 @import "mixins/responsive-visibility";

@@ -1,11 +1,11 @@
 var librariesFileList = [],
     projectFileList = [
-        "external/jquery/dist/jquery.js",
-        "external/isotope/dist/isotope.pkgd.min.js",
+        "docs/external/jquery/dist/jquery.js",
+        "docs/external/isotope/dist/isotope.pkgd.min.js",
         "js/_main.js"
     ],
     cssConcatList = [
-        'external/animate.css/animate.css'
+        'docs/external/animate.css/animate.css'
     ];
 
 module.exports = function (grunt) {
