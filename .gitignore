@@ -1,8 +1,6 @@
-external
 .sass-cache
 _site
 node_modules
 .idea
 .DS_Store
 bower_components
-external
