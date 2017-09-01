@@ -3,6 +3,7 @@ markdown: kramdown
 exclude: ['.sass-cache', 'node_modules', 'sass', 'Gruntfile.js', 'README.md', 'bower.json', 'package.json', 'js/plugins']
 
 ---
+destination: ./docs/
 layout: default
 title: Mat Gargano.com
 icons:
@@ -36,4 +37,3 @@ sections:
     - title: footer
       template: footer.html
 
-destination: ./docs/
