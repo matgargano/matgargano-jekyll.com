@@ -92,7 +92,7 @@ module.exports = function (grunt) {
                 command: 'jekyll build'
             },
             "robots-staging": {
-                command: 'printf "User-agent: *\nDisallow: /" > ./_site/robots.txt'
+                command: 'printf "User-agent: *\nDisallow: /" > ./docs/robots.txt'
             }
 
         },
@@ -110,7 +110,7 @@ module.exports = function (grunt) {
         rsync: {
             staging: {
                 options: {
-                    src: "_site/",
+                    src: "docs/",
                     dest: "ubuntu@qa.statenweb.com:/home/ubuntu/matgargano.com/public",
                     ssh: true,
                     recursive: true
@@ -118,7 +118,7 @@ module.exports = function (grunt) {
             },
             production: {
                 options: {
-                    src: "_site/",
+                    src: "docs/",
                     dest: "ubuntu@qa.statenweb.com:/home/ubuntu/matgargano.com/public",
                     ssh: true,
                     recursive: true

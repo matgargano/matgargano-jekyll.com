@@ -1,7 +1,4 @@
 external
-css/style.css
-css/style.css.map
-js/main.min.js
 .sass-cache
 _site
 node_modules
